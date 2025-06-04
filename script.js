@@ -6,33 +6,21 @@ const loveMessages = [
   "MY EVERYTHING",
   "SWEET DREAMS",
   "PRECIOUS ONE",
-  "AMAZING GIRL",
-  "PERFECT SMILE",
-  "ANGEL EYES",
-  "MY SUNSHINE",
-  "LOVE YOU MORE",
-  "ALWAYS TOGETHER",
-  "YOU & ME",
-  "ROMANTIC LOVE",
-  "SWEET KISS",
-  "WARM HUG",
-  "CUTE LAUGH",
-  "GENTLE TOUCH",
-  "LOVING HEART",
-  "PURE LOVE",
-  "ENDLESS JOY",
-  "SWEETEST DREAM",
+  "SYLVIE KIESER",
+  "SYLVIE KIESER",
+  "SYLVIE KIESER",
+  "SYLVIE KIESER",
 ];
 
 const specialMessages = [
   "💕 SYLVIE KIESER 💕",
   "🌹 OCTOBER 17 🌹",
-  "💖 I LOVE YOU 💖",
-  "⭐ SYLVIE KIESER ⭐",
-  "🎀 YOUR'RE MINE 🎀",
+  "💖 SYLVIE KIESER 💖",
+  "⭐ MY PRINCESS ⭐",
+  "🎀 YOU'RE MINE 🎀",
   "💖 SYLVIE KIESER ⭐",
+  "🌹 SYLVIE KIESER 💖",
   "⭐ SYLVIE KIESER 💖",
-  "🌹 SYLVIE KIESER ⭐",
 ];
 
 const container = document.getElementById("matrixContainer");
@@ -50,11 +38,9 @@ const mouseMessages = [
   "LOVE YOU ♥",
   "MY HEART",
   "PRINCESS",
-  "BEAUTIFUL",
-  "FOREVER",
-  "ANGEL",
   "SWEETIE",
   "DARLING",
+  "SYLVIE",
 ];
 
 // Mouse follower functionality
@@ -161,12 +147,12 @@ function createFallingText() {
   // Start from above the screen
   text.style.top = "-50px";
 
-  // Random animation duration (4-7 seconds for smoother fall)
-  const duration = Math.random() * 3 + 4;
+  // Random animation duration (3-6 seconds for varied speeds)
+  const duration = Math.random() * 3 + 3;
   text.style.animationDuration = duration + "s";
 
-  // No delay - start immediately
-  text.style.animationDelay = "0s";
+  // Small random delay for natural variation
+  text.style.animationDelay = Math.random() * 0.5 + "s";
 
   container.appendChild(text);
 
@@ -175,7 +161,7 @@ function createFallingText() {
     if (text.parentNode) {
       text.parentNode.removeChild(text);
     }
-  }, duration * 1000 + 500);
+  }, (duration + 0.5) * 1000 + 500);
 }
 
 function updateCentralMessage() {
@@ -194,11 +180,11 @@ function updateCentralMessage() {
 // Create falling text every 200-800ms
 function startMatrixRain() {
   createFallingText();
-  // Adjust frequency based on screen size
+  // Adjust frequency based on screen size - faster for denser rain
   const isMobile = window.innerWidth <= 768;
   const delay = isMobile
-    ? Math.random() * 800 + 300
-    : Math.random() * 600 + 200;
+    ? Math.random() * 300 + 100
+    : Math.random() * 200 + 100;
   setTimeout(startMatrixRain, delay);
 }
 
@@ -208,12 +194,19 @@ setInterval(updateCentralMessage, 3000);
 // Start the matrix rain effect
 startMatrixRain();
 
-// Create initial burst of text
+// Create initial burst of text - more dense
 const isMobile = window.innerWidth <= 768;
-const initialBurst = isMobile ? 5 : 8;
+const initialBurst = isMobile ? 12 : 20;
 for (let i = 0; i < initialBurst; i++) {
-  setTimeout(createFallingText, i * 300);
+  setTimeout(createFallingText, i * 150);
 }
+
+// Create additional burst after 2 seconds
+setTimeout(() => {
+  for (let i = 0; i < 10; i++) {
+    setTimeout(createFallingText, i * 100);
+  }
+}, 2000);
 
 // Adjust static lines for mobile
 function createStaticLines() {
