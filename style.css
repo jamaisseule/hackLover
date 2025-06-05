@@ -67,7 +67,7 @@ body::before {
   color:  #00ff00;
   font-weight: 700;
   font-size: 16px;
-  text-shadow: 0 0 10px  #00ff00, 0 0 20px #ff1493, 0 0 30px #ff1493;
+  text-shadow: 0 0 10px  #00ff00, 0 0 20px #36f736, 0 0 30px #36f736;
   animation: fall linear infinite;
   white-space: nowrap;
   pointer-events: none;
@@ -76,7 +76,7 @@ body::before {
 .falling-text.highlight {
   color: #fff;
   font-size: 20px;
-  text-shadow: 0 0 15px  #00ff00, 0 0 25px #ff1493, 0 0 35px #ff1493;
+  text-shadow: 0 0 15px  #00ff00, 0 0 25px #36f736, 0 0 35px #36f736;
   font-weight: 700;
 }
 
@@ -118,7 +118,7 @@ body::before {
   padding: 20px 40px;
   border-radius: 10px;
   border: 2px solid  #00ff00;
-  box-shadow: 0 0 30px #ff1493;
+  box-shadow: 0 0 30px #36f736;
 }
 
 @keyframes mild-glitch {
@@ -152,12 +152,12 @@ body::before {
 @keyframes pulse {
   0%,
   100% {
-    text-shadow: 0 0 20px  #00ff00, 0 0 40px #ff1493;
+    text-shadow: 0 0 20px  #00ff00, 0 0 40px #36f736;
     border-color:  #00ff00;
   }
   50% {
-    text-shadow: 0 0 30px  #00ff00, 0 0 60px #ff1493, 0 0 80px #ff1493;
-    border-color: #ff1493;
+    text-shadow: 0 0 30px  #00ff00, 0 0 60px #36f736, 0 0 80px #36f736;
+    border-color: #36f736;
   }
 }
 
