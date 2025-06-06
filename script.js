@@ -114,22 +114,16 @@ function draw(time = 0) {
 
 // Enhanced terminal messages
 const hackMessages = [
-  "> Scanning for vulnerable heart networks...",
-  "> Target acquired: YOUR EMOTIONAL CORE",
-  "> Bypassing love firewall defenses...",
-  "> Injecting romantic payload...",
-  "> Installing love backdoor access...",
-  "> Cracking heart encryption protocols...",
   "> Deploying cupid malware successfully...",
   "> Emotional database compromised...",
   "> Love level exceeding safe parameters...",
-  "> Resistance protocols disabled...",
   "> Heart takeover: 100% COMPLETE",
   "> Status: PERMANENTLY YOURS",
   "> Mission: LOVE YOU INFINITELY",
   "> Warning: NO ANTIVIRUS CAN CURE THIS",
   "> Danger:  YOU'RE INFECTED WITH MY LOVE ",
-  "> Final message: YOU'RE STUCK WITH ME! J❤️S",
+  "> Final message: YOU'RE STUCK WITH ME! JACOD!",
+  "> SYLVIE LOVE JACOD!"
 ];
 
 let messageIndex = 0;
@@ -162,7 +156,7 @@ function addTerminalMessage() {
     terminal.scrollTop = terminal.scrollHeight;
     messageIndex++;
 
-    const nextDelay = Math.random() * 3000 + 2000;
+    const nextDelay = Math.random() * 1000 + 800;
     setTimeout(addTerminalMessage, nextDelay);
   }
 }
